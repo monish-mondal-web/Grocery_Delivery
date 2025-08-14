@@ -1,7 +1,7 @@
 import Order from "../models/Order.js";
-import Product from "../models/Product.js";
+import Product from "../models/product.js";
 import scripe, { Stripe } from "stripe";
-import User from "../models/User.js"
+import User from "../models/user.js"
 
 //place order cod: /api/order/cod
 export const placeOrderCOD = async (req, res) => {
