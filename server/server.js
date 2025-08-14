@@ -1,3 +1,4 @@
+import app from "./app.js"; //for versel
 import cookieParser from "cookie-parser";
 import express from "express";
 import cors from "cors";
@@ -23,7 +24,10 @@ try {
 }
 
 // Alowed Multiple Origin
-const allowedOrigin = ["http://localhost:5173"];
+const allowedOrigin = [
+  "http://localhost:5173",
+  "https://your-frontend.vercel.app",
+];
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhooks);
 
 // Middleware configuration
