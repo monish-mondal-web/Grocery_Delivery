@@ -17,9 +17,14 @@ const port = process.env.PORT || 4000;
 
 try {
   await connectDb();
-  await connectCloudinary();
 } catch (err) {
   console.error("MongoDB and Cloudinary Connection Error:", err);
+}
+
+try {
+  await connectCloudinary();
+} catch (err) {
+  console.error("Cloudinary Connection Error:", err);
 }
 
 // Alowed Multiple Origin
