@@ -1,4 +1,3 @@
-import app from "./app.js"; //for versel
 import cookieParser from "cookie-parser";
 import express from "express";
 import cors from "cors";
