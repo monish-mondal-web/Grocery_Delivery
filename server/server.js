@@ -30,7 +30,7 @@ try {
 // Alowed Multiple Origin
 const allowedOrigin = [
   "http://localhost:5173",
-  "https://your-frontend.vercel.app",
+  "https://grocery-delivery-beta.vercel.app",
 ];
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhooks);
 
