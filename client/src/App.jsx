@@ -1,5 +1,4 @@
-import React from 'react'
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import { Toaster } from 'react-hot-toast'
@@ -17,7 +16,7 @@ import SellerLayout from './pages/Seller/SellerLayout'
 import AddProduct from './pages/Seller/AddProduct'
 import Order from './pages/Seller/Order'
 import ProductList from './pages/Seller/ProductList'
-import Loading from './components/loading'
+import Loading from './components/Loading'
 
 const App = () => {
   const isSellerPath = useLocation().pathname.includes("seller");
