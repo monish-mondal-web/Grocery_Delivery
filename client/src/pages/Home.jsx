@@ -3,8 +3,6 @@ import BottomBanner from "../components/BottomBanner";
 import Categories from "../components/Categories";
 import MainBanner from "../components/MainBanner";
 import Newslater from "../components/Newslater";
-import Navbar from "../components/navbar";
-import React from "react";
 
 
 const Home = () => {
@@ -15,7 +13,6 @@ const Home = () => {
       <BestSellers/>
       <BottomBanner/>
       <Newslater/>
-      
     </div>
   );
 };
