@@ -60,7 +60,7 @@ const Navbar = () => {
           setOpen(false);
         }}
       >
-        <img src={assets.logo} alt="" />
+        <img className="w-37" src={assets.logo_monish} alt="" />
       </NavLink>
 
       {/* Desktop Menu */}
