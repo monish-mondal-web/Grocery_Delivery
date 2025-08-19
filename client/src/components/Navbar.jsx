@@ -167,7 +167,7 @@ const Navbar = () => {
         <div
           className={`${
             open ? "flex" : "hidden"
-          } absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}
+          } absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden z-10`}
         >
           <NavLink onClick={() => setOpen(false)} to="/">
             Home
@@ -183,7 +183,6 @@ const Navbar = () => {
           {!user ? (
             <button
               onClick={() => {
-                setOpen(false);
                 setShowUserLogin(true);
               }}
               className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm"
@@ -192,7 +191,10 @@ const Navbar = () => {
             </button>
           ) : (
             <button
-              onClick={logout}
+              onClick={() => {
+                setOpen(false);
+                logout();
+              }}
               className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm"
             >
               Logout
